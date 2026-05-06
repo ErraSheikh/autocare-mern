@@ -59,7 +59,7 @@ const Services = () => {
                         <div key={service._id} style={styles.card}>
 
                             {/* Service Icon */}
-                            <div style={styles.iconBox}>🔧</div>
+                            <div style={styles.iconBox}></div>
 
                             {/* Service Info */}
                             <h2 style={styles.serviceName}>{service.name}</h2>

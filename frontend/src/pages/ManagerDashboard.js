@@ -89,7 +89,7 @@ const ManagerDashboard = () => {
 
                         {/* Details */}
                         <div style={styles.bookingDetails}>
-                            <span>🔧 {booking.service?.name}</span>
+                            <span> {booking.service?.name}</span>
                             <span>
                                 🚗 {booking.vehicleDetails?.year}{' '}
                                 {booking.vehicleDetails?.make}{' '}

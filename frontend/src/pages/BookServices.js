@@ -77,7 +77,7 @@ const BookService = () => {
                 {/* Service Summary */}
                 {service && (
                     <div style={styles.serviceSummary}>
-                        <h2 style={styles.serviceTitle}>🔧 {service.name}</h2>
+                        <h2 style={styles.serviceTitle}>{service.name}</h2>
                         <p style={styles.serviceDesc}>{service.description}</p>
                         <div style={styles.serviceMeta}>
                             <span style={styles.price}>

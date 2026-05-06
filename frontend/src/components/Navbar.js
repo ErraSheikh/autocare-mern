@@ -13,7 +13,7 @@ const Navbar = () => {
     return (
         <nav style={styles.nav}>
             <div style={styles.container}>
-                <Link to="/" style={styles.logo}>🔧 AutoCare</Link>
+                <Link to="/" style={styles.logo}>⚙️ AutoCare</Link>
                 <div style={styles.links}>
                     <Link to="/services" style={styles.link}>Services</Link>
 

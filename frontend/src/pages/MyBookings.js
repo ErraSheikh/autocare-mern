@@ -68,7 +68,7 @@ const MyBookings = () => {
                             {/* Top Row: Service name + Status badges */}
                             <div style={styles.cardHeader}>
                                 <h2 style={styles.serviceName}>
-                                    🔧 {booking.service?.name}
+                                    {booking.service?.name}
                                 </h2>
                                 <div style={styles.badges}>
                                     <span className={`badge badge-${booking.status}`}>

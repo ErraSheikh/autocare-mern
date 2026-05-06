@@ -119,15 +119,15 @@ const AdminDashboard = () => {
                 <button
                     style={activeTab === 'bookings' ? styles.tabActive : styles.tab}
                     onClick={() => setActiveTab('bookings')}
-                >📋 Manage Bookings</button>
+                >Manage Bookings</button>
                 <button
                     style={activeTab === 'services' ? styles.tabActive : styles.tab}
                     onClick={() => setActiveTab('services')}
-                >🔧 Manage Services</button>
+                >Manage Services</button>
                 <button
                     style={activeTab === 'users' ? styles.tabActive : styles.tab}
                     onClick={() => setActiveTab('users')}
-                >👥 View Accounts</button>
+                >View Accounts</button>
             </div>
 
             {/* ── Bookings Tab ── */}
@@ -157,13 +157,13 @@ const AdminDashboard = () => {
                                     </div>
                                 </div>
                                 <div style={styles.bookingDetails}>
-                                    <span>🔧 {booking.service?.name}</span>
-                                    <span>🚗 {booking.vehicleDetails?.year}{' '}
+                                    <span> {booking.service?.name}</span>
+                                    <span> {booking.vehicleDetails?.year}{' '}
                                         {booking.vehicleDetails?.make}{' '}
                                         {booking.vehicleDetails?.model}
                                     </span>
                                     <span>
-                                        📅 {new Date(booking.appointmentDate)
+                                        {new Date(booking.appointmentDate)
                                             .toLocaleString('en-PK', {
                                                 dateStyle: 'medium',
                                                 timeStyle: 'short'
