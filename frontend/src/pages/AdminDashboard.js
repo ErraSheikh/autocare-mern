@@ -141,7 +141,7 @@ const AdminDashboard = () => {
                                 <div style={styles.bookingHeader}>
                                     <div>
                                         <p style={styles.customerName}>
-                                            👤 {booking.customer?.name}
+                                             {booking.customer?.name}
                                         </p>
                                         <p style={styles.customerEmail}>
                                             {booking.customer?.email}
