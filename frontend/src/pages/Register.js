@@ -60,7 +60,7 @@ const Register = () => {
 
                 {/* Header */}
                 <div style={styles.header}>
-                    <h1 style={styles.title}>⚙️AutoCare</h1>
+                    <h1 style={styles.title}>AutoCare</h1>
                     <p style={styles.subtitle}>Create your account</p>
                 </div>
 
