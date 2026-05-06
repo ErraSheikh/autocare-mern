@@ -71,7 +71,7 @@ const ManagerDashboard = () => {
                         <div style={styles.bookingHeader}>
                             <div>
                                 <p style={styles.customerName}>
-                                    👤 {booking.customer?.name}
+                                     {booking.customer?.name}
                                 </p>
                                 <p style={styles.customerEmail}>
                                     {booking.customer?.email}
@@ -91,12 +91,12 @@ const ManagerDashboard = () => {
                         <div style={styles.bookingDetails}>
                             <span> {booking.service?.name}</span>
                             <span>
-                                🚗 {booking.vehicleDetails?.year}{' '}
+                                 {booking.vehicleDetails?.year}{' '}
                                 {booking.vehicleDetails?.make}{' '}
                                 {booking.vehicleDetails?.model}
                             </span>
                             <span>
-                                📅 {new Date(booking.appointmentDate)
+                                {new Date(booking.appointmentDate)
                                     .toLocaleString('en-PK', {
                                         dateStyle: 'medium',
                                         timeStyle: 'short'

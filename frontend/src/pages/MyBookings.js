@@ -57,7 +57,7 @@ const MyBookings = () => {
 
             {bookings.length === 0 ? (
                 <div style={styles.empty}>
-                    <p style={styles.emptyIcon}>📋</p>
+                    <p style={styles.emptyIcon}></p>
                     <p>You have no bookings yet.</p>
                 </div>
             ) : (
@@ -83,7 +83,7 @@ const MyBookings = () => {
                             {/* Booking Details Grid */}
                             <div style={styles.detailsGrid}>
                                 <div style={styles.detailItem}>
-                                    <span style={styles.detailLabel}>📅 Appointment</span>
+                                    <span style={styles.detailLabel}>Appointment</span>
                                     <span style={styles.detailValue}>
                                         {new Date(booking.appointmentDate)
                                             .toLocaleString('en-PK', {
@@ -93,7 +93,7 @@ const MyBookings = () => {
                                     </span>
                                 </div>
                                 <div style={styles.detailItem}>
-                                    <span style={styles.detailLabel}>🚗 Vehicle</span>
+                                    <span style={styles.detailLabel}>Vehicle</span>
                                     <span style={styles.detailValue}>
                                         {booking.vehicleDetails?.year}{' '}
                                         {booking.vehicleDetails?.make}{' '}
@@ -101,13 +101,13 @@ const MyBookings = () => {
                                     </span>
                                 </div>
                                 <div style={styles.detailItem}>
-                                    <span style={styles.detailLabel}>⏱ Duration</span>
+                                    <span style={styles.detailLabel}> Duration</span>
                                     <span style={styles.detailValue}>
                                         {booking.service?.duration}
                                     </span>
                                 </div>
                                 <div style={styles.detailItem}>
-                                    <span style={styles.detailLabel}>💰 Amount</span>
+                                    <span style={styles.detailLabel}>Amount</span>
                                     <span style={styles.amount}>
                                         Rs. {booking.totalAmount?.toLocaleString()}
                                     </span>
@@ -126,7 +126,7 @@ const MyBookings = () => {
                                     >
                                         {payingId === booking._id
                                             ? 'Processing...'
-                                            : '💳 Pay Now'}
+                                            : 'Pay Now'}
                                     </button>
                                 )}
 
