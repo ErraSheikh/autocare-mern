@@ -2,7 +2,8 @@ import axios from 'axios';
 
 // Base URL for all API calls - points to our backend
 const API = axios.create({
-    baseURL: 'http://localhost:5000/api'
+    // baseURL: 'http://localhost:5000/api'
+    baseURL: 'https://autocare-mern-production-180d.up.railway.app/api'
 });
 
 // Interceptor - automatically adds token to every request
