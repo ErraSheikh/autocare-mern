@@ -48,7 +48,7 @@ const AdminDashboard = () => {
         setServiceMsg(''); setServiceError('');
         try {
             await API.post('/services', { ...serviceForm, price: Number(serviceForm.price) });
-            setServiceMsg('✅ Service added successfully!');
+            setServiceMsg('Service added successfully!');
             setServiceForm({ name: '', description: '', price: '', duration: '' });
             fetchAll();
         } catch (err) {
@@ -295,7 +295,7 @@ const AdminDashboard = () => {
                     {users.map((u) => (
                         <div key={u._id} style={styles.userCard}>
                             <div style={styles.userInfo}>
-                                <p style={styles.userName}>👤 {u.name}</p>
+                                <p style={styles.userName}>{u.name}</p>
                                 <p style={styles.userEmail}>{u.email}</p>
                                 <p style={styles.userDate}>
                                     Joined: {new Date(u.createdAt)

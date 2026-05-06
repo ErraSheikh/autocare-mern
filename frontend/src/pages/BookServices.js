@@ -83,7 +83,7 @@ const BookService = () => {
                             <span style={styles.price}>
                                 Rs. {service.price.toLocaleString()}
                             </span>
-                            <span style={styles.duration}>⏱ {service.duration}</span>
+                            <span style={styles.duration}> {service.duration}</span>
                         </div>
                     </div>
                 )}
