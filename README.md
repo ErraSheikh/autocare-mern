@@ -1,4 +1,4 @@
-# AutoCare 🚗
+# AutoCare
 
 AutoCare is a full-stack MERN web application designed to simplify vehicle service appointment management. The system allows customers to book service appointments online, manage their bookings, and track service history, while administrators can manage customers, appointments, and service records through a dedicated dashboard.
 
