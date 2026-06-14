@@ -2,7 +2,7 @@
 
 const mongoose = require('mongoose');
 
-// User Schema - stores both Admin and Customer accounts
+// User Schema 
 const userSchema = new mongoose.Schema(
     {
         name: {
@@ -13,7 +13,7 @@ const userSchema = new mongoose.Schema(
         email: {
             type: String,
             required: [true, 'Email is required'],
-            unique: true,       // No duplicate emails
+            unique: true,      
             lowercase: true,
             trim: true
         },
@@ -24,12 +24,12 @@ const userSchema = new mongoose.Schema(
         },
         role: {
             type: String,
-            enum: ['customer', 'admin', 'manager'], // Only these two values allowed
-            default: 'customer'          // Everyone is a customer by default
+            enum: ['customer', 'admin', 'manager'], 
+            default: 'customer'         
         }
     },
     {
-        timestamps: true // Adds createdAt and updatedAt automatically
+        timestamps: true 
     }
 );
 

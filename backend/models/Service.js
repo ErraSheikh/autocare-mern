@@ -1,8 +1,7 @@
-//backend/models/Service.js
 
 const mongoose = require('mongoose');
 
-// Service Schema - Admin manages these (oil change, tire rotation, etc.)
+// Service Schema
 const serviceSchema = new mongoose.Schema(
     {
         name: {
@@ -20,12 +19,12 @@ const serviceSchema = new mongoose.Schema(
             min: [0, 'Price cannot be negative']
         },
         duration: {
-            type: String, // e.g., "30 mins", "1 hour"
+            type: String, 
             required: [true, 'Duration is required']
         },
         isAvailable: {
             type: Boolean,
-            default: true // Admin can disable a service without deleting it
+            default: true 
         }
     },
     {

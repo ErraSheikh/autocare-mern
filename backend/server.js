@@ -6,7 +6,6 @@ const cors = require('cors');
 
 const app = express();
 
-// ── Middleware ─────────────────────────────
 // app.use(cors());
 app.use(cors({
     origin: '*',
@@ -15,16 +14,16 @@ app.use(cors({
 }));
 app.use(express.json());
 
-// ── Import Routes ──────────────────────────
+// ── Import Routes
 const authRoutes = require('./routes/authRoutes');
 const serviceRoutes = require('./routes/serviceRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
 
-// ── Environment Variables ──────────────────
+// ── Environment Variables
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
-// ── Database Connection ────────────────────
+// ── Database Connection 
 mongoose.connect(MONGO_URI)
     .then(() => {
         console.log("✅ MongoDB Connected Successfully");
@@ -34,12 +33,12 @@ mongoose.connect(MONGO_URI)
     })
     .catch(err => console.log("❌ Database Connection Error:", err));
 
-// ── Base Route ─────────────────────────────
+// ── Base Route 
 app.get('/', (req, res) => {
     res.send('AutoCare Backend is running...');
 });
 
-// ── Mount Routes ───────────────────────────
+// ── Mount Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/services', serviceRoutes); 
 app.use('/api/bookings', bookingRoutes);

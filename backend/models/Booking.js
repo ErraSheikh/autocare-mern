@@ -1,11 +1,11 @@
-//backend/models/Booking.js
+
 
 const mongoose = require('mongoose');
 
-// Booking Schema - Customer books a service
+// Booking Schema 
 const bookingSchema = new mongoose.Schema(
     {
-        // Which customer made this booking
+       
         customer: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'User',            // Links to User model
@@ -24,9 +24,9 @@ const bookingSchema = new mongoose.Schema(
         },
         // Vehicle information
         vehicleDetails: {
-            make: { type: String, required: true },   // e.g., Toyota
-            model: { type: String, required: true },  // e.g., Corolla
-            year: { type: Number, required: true }    // e.g., 2020
+            make: { type: String, required: true },   
+            model: { type: String, required: true },  
+            year: { type: Number, required: true }    
         },
         // Booking status - Admin can update this
         status: {
@@ -34,13 +34,11 @@ const bookingSchema = new mongoose.Schema(
             enum: ['pending', 'confirmed', 'completed', 'cancelled'],
             default: 'pending'
         },
-        // Mock payment - no real gateway, just simulation
         paymentStatus: {
             type: String,
             enum: ['unpaid', 'paid'],
             default: 'unpaid'
         },
-        // Snapshot of price at time of booking (price might change later)
         totalAmount: {
             type: Number,
             required: true

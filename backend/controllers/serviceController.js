@@ -1,10 +1,10 @@
 const Service = require('../models/Service');
 
-// ─────────────────────────────────────────
+
 // @route   POST /api/services
 // @desc    Create a new service (Admin only)
 // @access  Private/Admin
-// ─────────────────────────────────────────
+
 const createService = async (req, res) => {
     try {
         const { name, description, price, duration } = req.body;
@@ -32,11 +32,9 @@ const createService = async (req, res) => {
     }
 };
 
-// ─────────────────────────────────────────
 // @route   GET /api/services
 // @desc    Get all available services
 // @access  Public (anyone can view services)
-// ─────────────────────────────────────────
 const getAllServices = async (req, res) => {
     try {
         // Only return services that are available
@@ -53,11 +51,9 @@ const getAllServices = async (req, res) => {
     }
 };
 
-// ─────────────────────────────────────────
 // @route   GET /api/services/:id
 // @desc    Get a single service by ID
 // @access  Public
-// ─────────────────────────────────────────
 const getServiceById = async (req, res) => {
     try {
         const service = await Service.findById(req.params.id);
@@ -74,11 +70,9 @@ const getServiceById = async (req, res) => {
     }
 };
 
-// ─────────────────────────────────────────
 // @route   PUT /api/services/:id
 // @desc    Update a service (Admin only)
 // @access  Private/Admin
-// ─────────────────────────────────────────
 const updateService = async (req, res) => {
     try {
         const service = await Service.findById(req.params.id);
@@ -87,11 +81,10 @@ const updateService = async (req, res) => {
             return res.status(404).json({ message: 'Service not found' });
         }
 
-        // Update only the fields that were sent
         const updatedService = await Service.findByIdAndUpdate(
             req.params.id,
-            { ...req.body },        // Spread whatever fields are sent
-            { new: true }           // Return the updated document
+            { ...req.body },        
+            { new: true }           
         );
 
         res.status(200).json({
@@ -105,11 +98,9 @@ const updateService = async (req, res) => {
     }
 };
 
-// ─────────────────────────────────────────
 // @route   DELETE /api/services/:id
 // @desc    Delete a service (Admin only)
 // @access  Private/Admin
-// ─────────────────────────────────────────
 const deleteService = async (req, res) => {
     try {
         const service = await Service.findById(req.params.id);
