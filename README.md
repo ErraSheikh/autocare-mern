@@ -5,7 +5,7 @@ AutoCare is a full-stack MERN web application designed to simplify vehicle servi
 
 ## Live Application
 
-https://autocare-mern-efr84m1zd-errasheikhsprojects.vercel.app/
+https://autocare-mern-sigma.vercel.app/
 
 ## Deployment
 
